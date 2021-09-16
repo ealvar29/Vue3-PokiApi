@@ -9,13 +9,13 @@
 
 export default {
   name: "Home",
-  components: {},
+  setup(){
+    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    })
+  }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-img {
-  display: initial;
-}
-</style>
